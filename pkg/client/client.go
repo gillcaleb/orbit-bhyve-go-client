@@ -74,7 +74,7 @@ func (c *Client) sync() error {
     })
 }
 
-func (c *Client) startZone(zoneId, minutes int) error {
+func (c *Client) StartZone(zoneId, minutes int) error {
     conn, err := c.ws.Connect(c.token, c.config.DeviceId)
     if err != nil {
         return err
@@ -90,7 +90,7 @@ func (c *Client) startZone(zoneId, minutes int) error {
     })
 }
 
-func (c *Client) stopZone() error {
+func (c *Client) StopZone() error {
     conn, err := c.ws.Connect(c.token, c.config.DeviceId)
     if err != nil {
         return err
@@ -104,7 +104,7 @@ func (c *Client) stopZone() error {
     })
 }
 
-func (c *Client) modeOff() error {
+func (c *Client) ModeOff() error {
     conn, err := c.ws.Connect(c.token, c.config.DeviceId)
     if err != nil {
         return err
