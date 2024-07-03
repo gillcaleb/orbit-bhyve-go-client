@@ -14,7 +14,7 @@ type Client struct {
     token      string
     userId     string
     config     Config
-    ws         *WebSocketProxy
+    ws         *websocket.WebSocketProxy
     client     *http.Client
 }
 
@@ -28,12 +28,12 @@ type Config struct {
 func NewClient(config Config) *Client {
     return &Client{
         config: config,
-        ws:     &WebSocketProxy{},
+        ws:     &websocket.WebSocketProxy{},
         client: &http.Client{},
     }
 }
 
-func (c *Client) init() error {
+func (c *Client) Init() error {
     log.Println("Initializing Client")
     payload := map[string]interface{}{
         "session": map[string]string{

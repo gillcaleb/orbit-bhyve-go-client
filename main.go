@@ -18,15 +18,15 @@ func main() {
         fmt.Printf("Error reading config file, %s", err)
     }
 
-    config := Config{
+    config := client.Config{
         Endpoint: "https://api.orbitbhyve.com/v1",
         Email: viper.GetString("Email"),
         Password: viper.GetString("Password"),
         DeviceId: viper.GetString("DeviceId"),
     }
 
-    c := NewClient(config)
-    err := c.init()
+    c := client.NewClient(config)
+    err := c.Init()
     if err != nil {
         fmt.Println("Error initializing client: %v", err)
     }
