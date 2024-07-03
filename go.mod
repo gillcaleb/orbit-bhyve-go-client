@@ -1,4 +1,4 @@
-module github.com/gillcaleb/orbit-bhyve-provider
+module github.com/gillcaleb/orbit-bhyve-go-client
 
 go 1.21.4
 
