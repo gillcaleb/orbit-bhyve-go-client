@@ -63,7 +63,7 @@ func (c *Client) Init() error {
     return nil
 }
 
-func (c *Client) sync() error {
+func (c *Client) Sync() error {
     conn, err := c.ws.Connect(c.token, c.config.DeviceId)
     if err != nil {
         return err
