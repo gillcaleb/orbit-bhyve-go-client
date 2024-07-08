@@ -74,7 +74,7 @@ func (c *Client) sync() error {
     })
 }
 
-func (c *Client) ReadZone(zoneId int) error {
+func (c *Client) ReadZone(zoneId int) {
     return 5
 }
 
