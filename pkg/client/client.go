@@ -74,6 +74,10 @@ func (c *Client) sync() error {
     })
 }
 
+func (c *Client) ReadZone(zoneId int) error {
+    return 5
+}
+
 func (c *Client) StartZone(zoneId, minutes int) error {
     conn, err := c.ws.Connect(c.token, c.config.DeviceId)
     if err != nil {
